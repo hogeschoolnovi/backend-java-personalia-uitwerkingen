@@ -14,45 +14,45 @@ Er staat al een korte applicatie voor je klaar in `src.Main.java`. In deze appli
 De applicatie slaat de volgende gegevens van jou op:
 
 - name (String) - volledige naam van de student.
-    - **Contraint**: Moet langer dan 0 zijn.
+    - **Constraint**: Moet langer dan 0 zijn.
     - **Voorbeeld**: "Jan Jansen".
 
 - age (int) - leeftijd in hele jaren.
-    - **Contraint**: Tussen de 0 en 120.
+    - **Constraint**: Tussen de 0 en 120.
     - **Voorbeeld**: 20.
 
 - email (String) - e‑mailadres.
-    - **Contraint**: Moet een '@' bevatten
+    - **Constraint**: Moet een '@' bevatten
     - **Voorbeeld**: "jan.jansen@example.com".
 
 - adress (String) - adres of woonplaats
-    - **Contraint**: Mag niet leeg zijn (lengte > 0).
+    - **Constraint**: Mag niet leeg zijn (lengte > 0).
     - **Voorbeeld**: "Oudeweg 12, Amsterdam".
 
 - phone (String) - telefoonnummer (in de applicatie verwacht als string met cijfers).
-    - **Contraint**: Lengte tussen 6 en 15 tekens.
+    - **Constraint**: Lengte tussen 6 en 15 tekens.
     - **Voorbeeld**: "0612345678".
 
 - height (double) - lengte in centimeters.
-    - **Contraint**: Tussen 50.0 en 300.0 (cm).
+    - **Constraint**: Tussen 50.0 en 300.0 (cm).
     - **Voorbeeld**: 180.0
 
 - weight (double) - gewicht in kilogrammen.
-    - **Contraint**: Tussen dan 0 en 500.0 (kg).
+    - **Constraint**: Tussen dan 0 en 500.0 (kg).
     - **Voorbeeld**: 72.5
 
 
 
 - hasDriversLicense (boolean) - heeft een rijbewijs of niet.
-    - **Contraint**: Alleen true (ja) of false (nee).
+    - **Constraint**: Alleen true (ja) of false (nee).
     - **Voorbeeld**: true
 
 - hasPets (boolean) - heeft huisdieren of niet.
-    - **Contraint**: Alleen true (ja) of false (nee).
+    - **Constraint**: Alleen true (ja) of false (nee).
     - **Voorbeeld**: true
 
 - petCount (int) - aantal huisdieren.
-    - **Contraint**: Als hasPets == false moet petCount 0 zijn.
+    - **Constraint**: Als hasPets == false moet petCount 0 zijn.
     - **Voorbeeld**: 2
 
 ## Stappenplan
