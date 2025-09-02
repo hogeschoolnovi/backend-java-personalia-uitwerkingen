@@ -14,116 +14,66 @@ Er staat al een korte applicatie voor je klaar in `src.Main.java`. In deze appli
 De applicatie slaat de volgende gegevens van jou op:
 
 - name (String) - volledige naam van de student.
-    - **Constraint**: Moet langer dan 0 zijn.
-    - **Voorbeeld**: "Jan Jansen".
+  - **Voorbeeld**: "Jan Jansen"
 
 - age (int) - leeftijd in hele jaren.
-    - **Constraint**: Tussen de 0 en 120.
-    - **Voorbeeld**: 20.
+  - **Voorbeeld**: 20
 
 - email (String) - e‑mailadres.
-    - **Constraint**: Moet een '@' bevatten
-    - **Voorbeeld**: "jan.jansen@example.com".
+  - **Voorbeeld**: "jan.jansen@example.com"
 
-- adress (String) - adres of woonplaats
-    - **Constraint**: Mag niet leeg zijn (lengte > 0).
-    - **Voorbeeld**: "Oudeweg 12, Amsterdam".
+- adress (String) - adres of woonplaats.
+  - **Voorbeeld**: "Oudeweg 12, Amsterdam"
 
 - phone (String) - telefoonnummer (in de applicatie verwacht als string met cijfers).
-    - **Constraint**: Lengte tussen 6 en 15 tekens.
-    - **Voorbeeld**: "0612345678".
+  - **Voorbeeld**: "0612345678"
 
 - height (double) - lengte in centimeters.
-    - **Constraint**: Tussen 50.0 en 300.0 (cm).
-    - **Voorbeeld**: 180.0
+  - **Voorbeeld**: 180,0
 
 - weight (double) - gewicht in kilogrammen.
-    - **Constraint**: Tussen dan 0 en 500.0 (kg).
-    - **Voorbeeld**: 72.5
+  - **Voorbeeld**: 72,5
 
-
-
-- hasDriversLicense (boolean) - heeft een rijbewijs of niet.
-    - **Constraint**: Alleen true (ja) of false (nee).
-    - **Voorbeeld**: true
-
-- hasPets (boolean) - heeft huisdieren of niet.
-    - **Constraint**: Alleen true (ja) of false (nee).
-    - **Voorbeeld**: true
-
-- petCount (int) - aantal huisdieren.
-    - **Constraint**: Als hasPets == false moet petCount 0 zijn.
-    - **Voorbeeld**: 2
 
 ## Stappenplan
+
 ### Stap 1
-Maak methodes voor alle variabelen, door er `set` voor te zetten, zoals `public static setName()`. 
+Er staat al een variabele voor de scanner en de naam.
+Definieer variabelen voor de andere variabelen.
 
-#### Stap 1.1
-Voor name, age, email, adres, phone, height en weight hebben deze methodes ze zelfde structuur. 
-  - Als eerst print je wat je van de gebruiker wilt weten.
-  - Daarna gebruik je de juiste scanner methode (b.v. `nextLine()` of `nextInt()`) om de input van de gebruiker op te vragen.
-  - Vervolgens check je (met een if-statment) of de input aan de **constraint** voldoet.
-  - Als laatste sla je de input op in de variabele (of niet, als het niet aan de constraint voldoet)
-
-#### Stap 1.2
-Voor hasDriverLicense werkt het iets anders.
-- Vraag als eerste "Heb je een rijbewijs? (ja/nee): "
-- Vervolgens gebruik je de scanner om de input van de gebruiker op te halen. De verwachting is dat dit de String "ja" of "nee" is.
-- Als de input "ja" is, dan mag je de `hasDriversLicense` variabele op `True` zetten. Bij elk ander antwoord mag de variable op `False` komen te staan.
-
-#### Stap 1.4
-Voor hasPets en petCount maken we één methode.
-- Vraag als eerst "Heb je huisdieren? (ja/nee): "
-- Vervolgens gebruik je de scanner om de input van de gebruiker op te halen. De verwachting is dat dit de String "ja" of "nee" is.
-- Als het antwoord ja is, doe je de volgende stappen:
-  - Vraag de gebruiker hoeveel huisdieren deze heeft.
-  - Gebruik de scanner om deze tweede input van de gebruiker op te vragen
-  - Zet de tweede input van de gebruiker als waarde voor `petCount` en zet `hasPets` op True
-- Als het antwoord nee (of iets anders dan ja)  is, zet je `hasPets`op False en `petCount` op 0
-
-> Tip: zorg er bij elke input voor dat je de gebruiker laat weten of het succesvol was of niet. (door te printen "... is opgeslagen" of "... is niet opgeslagen")
 
 ### Stap 2
-Maak de `printProfile` af. 
-We hebben voor deze methode al een beginnetje gemaakt. Je ziet dat de naam geprint wordt, maar alleen als deze is ingevuld. Is de naam nog niet ingevuld, dan wordt er "Naam: niet ingevuld" geprint. 
+Maak methodes voor alle variabelen, door er `set` voor te zetten, zoals `public static setName()`.
 
-Doet hetzelfde voor de andere variabelen. print ze als ze zijn ingevuld en print "[itemnaam]: niet ingevuld" als het nog niet is ingevuld. 
+Voor name, age, email, adres, phone, height en weight hebben deze methodes ze zelfde structuur.
+- Als eerst print je wat je van de gebruiker wilt weten.
+- Daarna gebruik je de juiste scanner methode (b.v. `nextLine()` of `nextInt()`) om de input van de gebruiker op te vragen.
+- Vervolgens check je (met een if-statment) of de input aan de **constraint** voldoet.
+- Als laatste sla je de input op in de variabele (of niet, als het niet aan de constraint voldoet)
 
-Voor "driversLicense" en "pets" mag je checken of het True of False is en mag je printen "[itemnaam]: ja" of "[itemnaam]": nee". 
-
-Bij pets mag je ook de petCount in de print zetten, bijvoorbeeld "Huisdieren : ja (aantal 3)"
+> Tip: zorg er bij elke input voor dat je de gebruiker laat weten of het succesvol was. (door te printen "... is opgeslagen")
 
 ### Stap 3
-De `printMenu()` methode laat nu nog maar 2 opties zien, vul deze aan met printstatments voor je eigen opties. 
+Maak de `printProfile()` methode af.
+We hebben voor deze methode al een beginnetje gemaakt. Je ziet dat de naam geprint wordt.
 
-In de main methode staat nu: 
+Maak vergelijkbare print statements voor de andere variabelen.
 
-```java
-if (startKeuze == 0) {
-                System.out.println("Afsluiten. Tot ziens!");
-                scanner.close();
-                return;
-            } else if (startKeuze == 1) {
-                setName();
-            }
-//            Schrijf hier de if-statements waarin je de juiste methode aanroept.
+### Stap 4
+Als laatste stap in de `printProfile()` methode, mag je de BMI van de gebruiker berekenen. Dit ga je doen door een aparte `calculateBMI()` methode te maken. In deze methode bereken je eerste het BMI van de gebruiker. Daarna print je "Je BMI is ..."
 
-                    System.out.println();
+> Om het BMI van een persoon te berekenen kun je de volgende formule gebruiken:
+>
+> Gewicht [in kg] / (lengte [in meters] * lengte [in meters])
 
-        }
-```
-
-Vul dit aan met if-statments voor `startKeuze == 2`, `startKeuze == 3`, etc. Roep in die if-statements de juiste methode aan, zoals `setAge()` of `setEmail()`. 
-
+> Tip: Let er op dat je centimeters naar meters omrekent
 
 ## Voorbeeld output
 
 ```text
 ======================================
-Welkom bij de app van Donald
-Kies een optie:
- 0  - Afsluiten
+Welkom bij de profiel app
+Deze app zal het volgende uitvoeren:
  1  - Vul naam in
  2  - Vul leeftijd in
  3  - Vul e-mail in
@@ -131,13 +81,10 @@ Kies een optie:
  5  - Vul telefoonnummer in
  6  - Vul lengte in (cm)
  7  - Vul gewicht in (kg)
- 8  - Heb je een rijbewijs?
- 9 - Heb je huisdieren?
- 10 - Vul verjaardag in (bonus)
- 11 - Toon profiel
-Maak je keuze: 3
-Voer je e-mailadres in: d.trump@covfefe.com
-E-mail opgeslagen: d.trump@covfefe.com
+ 8 - Vul verjaardag in (bonus)
+ 9 - Toon profiel
+Voer je naam in: Donald Trump
+Naam opgeslagen: Donald Trump
 
 ```
 
